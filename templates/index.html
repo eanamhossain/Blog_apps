@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+  float:left;
+  height: 300px;
+  width: 300px;
+  background-color: cyan;
+  padding:10px;
+  margin:10px;
+}
+</style>
+</head>
+<body>
+
+
+
+<h1>Blog Home Page </h1>
+{% block content %}
+{% for post in object_list %}
+
+<div class="post-entry">
+    <h2><a href="">{{post.title}}</a></h2>
+    <p>{{post.message}}</p>
+</div>
+{% endfor %}
+{% endblock content %}
+
+</body>
+</html>
